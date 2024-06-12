@@ -1,4 +1,3 @@
-// controllers/foodLogController.js
 const FoodLog = require('../models/foodlogs');
 
 exports.getAllFoodLogs = function(req, res) {
@@ -10,6 +9,7 @@ exports.getAllFoodLogs = function(req, res) {
         }
     });
 };
+
 exports.createFoodLog = function(req, res) {
     const newFoodLog = req.body;
     FoodLog.create(newFoodLog, function(err, result) {
@@ -20,6 +20,7 @@ exports.createFoodLog = function(req, res) {
         }
     });
 };
+
 exports.updateFoodLog = function(req, res) {
     const log_id = req.params.id;
     const updatedFoodLog = req.body;
@@ -31,6 +32,7 @@ exports.updateFoodLog = function(req, res) {
         }
     });
 };
+
 exports.deleteFoodLog = function(req, res) {
     const log_id = req.params.id;
     FoodLog.delete(log_id, function(err, result) {

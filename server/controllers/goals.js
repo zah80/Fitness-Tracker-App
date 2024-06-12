@@ -1,5 +1,4 @@
-// controllers/goalController.js
-const Goal = require('../models/goal');
+const Goal = require('../models/goals');
 
 exports.getAllGoals = function(req, res) {
     Goal.getAllGoals(function(err, goals) {
@@ -10,6 +9,7 @@ exports.getAllGoals = function(req, res) {
         }
     });
 };
+
 exports.createGoal = function(req, res) {
     const newGoal = req.body;
     Goal.createGoal(newGoal, function(err, result) {
@@ -20,6 +20,7 @@ exports.createGoal = function(req, res) {
         }
     });
 };
+
 exports.updateGoal = function(req, res) {
     const goal_id = req.params.id;
     const updatedGoal = req.body;
@@ -31,6 +32,7 @@ exports.updateGoal = function(req, res) {
         }
     });
 };
+
 exports.deleteGoal = function(req, res) {
     const goal_id = req.params.id;
     Goal.deleteGoal(goal_id, function(err, result) {

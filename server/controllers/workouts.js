@@ -1,5 +1,4 @@
-// controllers/workoutController.js
-const Workout = require('../models/workout');
+const Workout = require('../models/workouts');
 
 exports.getAllWorkouts = function(req, res) {
     Workout.getAllWorkouts(function(err, workouts) {
@@ -10,6 +9,7 @@ exports.getAllWorkouts = function(req, res) {
         }
     });
 };
+
 exports.createWorkout = function(req, res) {
     const newWorkout = req.body;
     Workout.createWorkout(newWorkout, function(err, result) {
@@ -20,6 +20,7 @@ exports.createWorkout = function(req, res) {
         }
     });
 };
+
 exports.updateWorkout = function(req, res) {
     const workout_id = req.params.id;
     const updatedWorkout = req.body;
@@ -31,6 +32,7 @@ exports.updateWorkout = function(req, res) {
         }
     });
 };
+
 exports.deleteWorkout = function(req, res) {
     const workout_id = req.params.id;
     Workout.deleteWorkout(workout_id, function(err, result) {
