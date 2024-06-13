@@ -3,10 +3,9 @@ const Goal = require('../models/goals');
 exports.getAllGoals = function(req, res) {
     Goal.getAllGoals(function(err, goals) {
         if (err) {
-            res.status(500).json({ message: err.message });
-        } else {
-            res.json(goals);
+            return res.status(500).json({ message: err.message });
         }
+        res.json(goals);
     });
 };
 
@@ -14,10 +13,9 @@ exports.createGoal = function(req, res) {
     const newGoal = req.body;
     Goal.createGoal(newGoal, function(err, result) {
         if (err) {
-            res.status(500).json({ message: err.message });
-        } else {
-            res.status(201).send('Goal created successfully');
+            return res.status(500).json({ message: err.message });
         }
+        res.status(201).send('Goal created successfully');
     });
 };
 
@@ -26,10 +24,9 @@ exports.updateGoal = function(req, res) {
     const updatedGoal = req.body;
     Goal.updateGoal(goal_id, updatedGoal, function(err, result) {
         if (err) {
-            res.status(500).json({ message: err.message });
-        } else {
-            res.send('Goal updated successfully');
+            return res.status(500).json({ message: err.message });
         }
+        res.send('Goal updated successfully');
     });
 };
 
@@ -37,9 +34,8 @@ exports.deleteGoal = function(req, res) {
     const goal_id = req.params.id;
     Goal.deleteGoal(goal_id, function(err, result) {
         if (err) {
-            res.status(500).json({ message: err.message });
-        } else {
-            res.send('Goal deleted successfully');
+            return res.status(500).json({ message: err.message });
         }
+        res.send('Goal deleted successfully');
     });
 };

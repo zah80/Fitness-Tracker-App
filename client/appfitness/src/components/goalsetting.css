@@ -1,0 +1,102 @@
+/* GoalSetting.css */
+
+.goal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.goal-card .goal-image {
+  width: 100%;
+  text-align: center;
+}
+
+.goal-card .goal-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.goal-card .goal-details {
+  margin-top: 10px;
+}
+
+.goal-card .goal-details div {
+  margin-bottom: 8px;
+}
+
+.goal-card .goal-buttons {
+  margin-top: 10px;
+}
+
+.goal-card .goal-buttons button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.goal-card .goal-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.goal-form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.goal-form input[type="text"],
+.goal-form input[type="number"],
+.goal-form input[type="date"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.goal-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+.goal-form button:hover {
+  background-color: #218838;
+}
+
+.goal-form input::placeholder {
+  color: #ccc;
+}
+
+.goal-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.goal-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}

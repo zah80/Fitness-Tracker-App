@@ -1,0 +1,28 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.dashboard-section {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.scrollable-section {
+  overflow-y: auto; /* Enable vertical scroll */
+  max-height: calc(100vh - 200px); /* Adjust as necessary */
+  padding: 20px 0;
+}
