@@ -1,64 +1,17 @@
-/* WorkoutLog.css */
-
+/* General Styles */
 .workout-log-container {
-  max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
 }
 
-.workout-log-container h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.workout-form {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-.workout-form input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.workout-form input[type="text"]::placeholder {
-  color: #ccc;
-}
-
-.workout-form input[type="text"]:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
-}
-
-.create-btn {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #28a745;
-  color: #fff;
-  cursor: pointer;
-}
-
-.create-btn:hover {
-  background-color: #218838;
-}
-
-.card-container {
+/* Workout List Styles */
+.workout-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.card {
+/* Workout Card Styles */
+.workout-card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -68,28 +21,113 @@
   flex-direction: column;
 }
 
-.card input[type="text"] {
+.workout-card .workout-image {
   width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  text-align: center;
 }
 
-.card-actions {
-  margin-top: auto;
+.workout-card .workout-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-.delete-btn {
+.workout-card .workout-details {
+  margin-top: 10px;
+}
+
+.workout-card .workout-details div {
+  margin-bottom: 8px;
+}
+
+.workout-card .workout-buttons {
+  margin-top: 10px;
+}
+
+.workout-card .workout-buttons button {
+  margin-right: 10px;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  background-color: #dc3545;
+  background-color: #007bff;
   color: #fff;
   cursor: pointer;
 }
 
-.delete-btn:hover {
-  background-color: #c82333;
+.workout-card .workout-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Workout Form Styles */
+.workout-form {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.workout-form input[type="text"],
+.workout-form input[type="number"],
+.workout-form input[type="date"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.workout-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+}
+
+.workout-form button:hover {
+  background-color: #218838;
+}
+
+.workout-form input::placeholder {
+  color: #ccc;
+}
+
+.workout-form input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.workout-form button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
 }
